@@ -95,10 +95,24 @@ class UNet(Model):
 ## 학습데이터
 - CamVid
     - 도로 주행 데이터 셋
-        - 이미지 + 마스크 / 클래스 32개
+        - 이미지 + 마스크 / 클래스 11개
         - [다운로드 경로(캐글)](https://www.kaggle.com/datasets/carlolepelaars/camvid)
     - 마스크 이미지 (색상채널 추가 예시)
     ![마스크](images/0001TP_006690_L.png)
     - 마스크 이미지 (256, 256) 전처리 필요
 
+
+## 학습 및 예측 
+- loss, accuracy
+    - loss : 0.6, acccuracy : 0.8
+- 예측 결과 이미지
+   - [원본] [원본 마스크] [예측 마스크]
+![예측 사진](./images/학습_결과_예측.png)
+
+## 변경 사항
+- 2025/7/21
+    - fix: Fuctional API 로 모델 변경
+        - Model 을 상속한 학습 모델을 파일로 저장 후 불러오면 오류가 발생되 Fuctional API 로 교체
+- 2025/7/18
+    - docs: README에 모델 구조, 학습데이터 설명 추가
 
